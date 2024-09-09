@@ -3,11 +3,14 @@ from flask import Flask, request, jsonify, redirect, session
 from flask_session import Session
 import requests
 from rymscraper import scrape_rym_top_songs
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Secret key for session management
 app.config['SESSION_TYPE'] = 'filesystem'  # Store session data in the filesystem
 Session(app) # Initialize the session
+
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 SPOTIFY_CLIENT_ID = '44a84bad90034dcb8f9058830b78305d'
 SPOTIFY_CLIENT_SECRET = '355393d91f0b48929b2c21ebf9bf414b'
@@ -22,6 +25,10 @@ def get_spotify_auth_url():
             f'client_id={SPOTIFY_CLIENT_ID}&'
             f'scope={scope}&'
             f'redirect_uri={SPOTIFY_REDIRECT_URI}')
+
+@app.route('/test-cors')
+def test_cors():
+    return 'CORS is working!'
 
 @app.route('/')
 def index():
@@ -43,38 +50,12 @@ def callback():
     })
 
     data = response.json()
-    session['access_token'] = data.get('access_token')
+    access_token = data.get('access_token')
+    session['access_token'] = access_token
 
     print('Access token:', session['access_token'])
 
-    return redirect('/playlist_form')
-
-@app.route('/playlist_form')
-def playlist_form():
-    # serve html for for playlist generation
-    return '''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Generate Playlist</title>
-    </head>
-    <body>
-        <h1>Generate Playlist</h1>
-        <form action="/generate_playlist" method="post">
-            <label for="year">Year:</label>
-            <input type="text" id="year" name="year" placeholder="2024" required>
-            <br>
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre">
-            <br>
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist" name="artist">
-            <br>
-            <button type="submit">Generate Playlist</button>
-        </form>
-    </body>
-    </html>
-    '''
+    return redirect(f'http://localhost:3000/playlist_form?access_token={access_token}')
 
 @app.route('/generate_playlist', methods=['POST'])
 def generate_playlist():
@@ -124,10 +105,13 @@ def generate_playlist():
         'Content-Type': 'application/json'
     })
 
-    return jsonify({
+    # Prepare response with CORS headers
+    response = jsonify({
         'playlist_id': playlist_id,
         'playlist_name': playlist_name
     })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 if __name__ == '__main__':
     app.run(debug=True)
