@@ -64,10 +64,11 @@ def generate_playlist():
     if not access_token:
         return redirect('/')
 
-    data = request.form
+    data = request.get_json()
     year = data.get('year', 'all-time')
     genre = data.get('genre', None)
     artist = data.get('artist', None)
+    print(artist)
 
     songs = scrape_rym_top_songs(year, genre, artist)
     print('songs: ', songs)

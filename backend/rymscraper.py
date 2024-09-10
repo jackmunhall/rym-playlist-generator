@@ -18,8 +18,6 @@ def scrape_rym_top_songs(year="all-time", genre=None, artist=None):
         genre_filter = f"g:{genre.replace(' ', '%2d')}"
         url = f"{url}/{genre_filter}"
 
-    print(url)
-
     cookies = {
         '_pubcid': 'fe20b9ba-099c-4b83-9dbe-8c42a53e42fe',
         '_pubcid_cst': 'zix7LPQsHA%3D%3D',
@@ -100,7 +98,3 @@ def scrape_rym_top_songs(year="all-time", genre=None, artist=None):
                 })
 
     return songs
-
-# Test the function
-songs = scrape_rym_top_songs(year="all-time", artist="red house painters")
-print(songs)

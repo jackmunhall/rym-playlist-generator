@@ -11,6 +11,7 @@ const PlaylistForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log(artist)
 
         try {
             const response = await axios.post('http://localhost:5000/generate_playlist', {
