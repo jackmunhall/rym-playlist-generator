@@ -12,8 +12,8 @@ Session(app) # Initialize the session
 
 CORS(app, supports_credentials=True, origins=['http://localhost:3000'])
 
-SPOTIFY_CLIENT_ID = '44a84bad90034dcb8f9058830b78305d'
-SPOTIFY_CLIENT_SECRET = '355393d91f0b48929b2c21ebf9bf414b'
+# SPOTIFY_CLIENT_ID = ''
+# SPOTIFY_CLIENT_SECRET = ''
 SPOTIFY_REDIRECT_URI = 'http://localhost:5000/callback'
 SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
