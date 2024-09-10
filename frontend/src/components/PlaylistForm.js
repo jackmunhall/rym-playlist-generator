@@ -17,6 +17,12 @@ const PlaylistForm = () => {
                 year,
                 genre,
                 artist
+            }, {
+                withCredentials: true
+            }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
 
             setPlaylist(response.data);

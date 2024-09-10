@@ -10,7 +10,7 @@ app.secret_key = os.urandom(24)  # Secret key for session management
 app.config['SESSION_TYPE'] = 'filesystem'  # Store session data in the filesystem
 Session(app) # Initialize the session
 
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, supports_credentials=True, origins=['http://localhost:3000'])
 
 SPOTIFY_CLIENT_ID = '44a84bad90034dcb8f9058830b78305d'
 SPOTIFY_CLIENT_SECRET = '355393d91f0b48929b2c21ebf9bf414b'
@@ -55,7 +55,7 @@ def callback():
 
     print('Access token:', session['access_token'])
 
-    return redirect(f'http://localhost:3000/playlist_form?access_token={access_token}')
+    return redirect('http://localhost:3000/playlist_form')
 
 @app.route('/generate_playlist', methods=['POST'])
 def generate_playlist():
@@ -79,7 +79,10 @@ def generate_playlist():
     print(user_id_response.json())
 
     # playlist name should be 'Top {genre} Songs of {year} by {artist}' where artist and genre are optional
-    playlist_name = f'Top {genre} Songs of {year}'
+    playlist_name = f'Top rym'
+    if genre:
+        playlist_name += f' {genre}'
+    playlist_name += f' songs of {year}'
     if artist:
         playlist_name += f' by {artist}'
 
@@ -110,7 +113,7 @@ def generate_playlist():
         'playlist_id': playlist_id,
         'playlist_name': playlist_name
     })
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    
     return response
 
 if __name__ == '__main__':
