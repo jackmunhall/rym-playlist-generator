@@ -70,6 +70,7 @@ def generate_playlist():
     artist = data.get('artist', None)
 
     songs = scrape_rym_top_songs(year, genre, artist)
+    print('songs: ', songs)
 
     # Get user ID
     user_id_response = requests.get(f'{SPOTIFY_API_URL}/me', headers={

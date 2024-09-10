@@ -26,23 +26,25 @@ def scrape_rym_top_songs(year="all-time", genre=None, artist=None):
         '_lr_env_src_ats': 'false',
         'pbjs-unifiedid': '%7B%22TDID%22%3A%221a731514-10e5-45b2-af74-04dc141c0f5e%22%2C%22TDID_LOOKUP%22%3A%22TRUE%22%2C%22TDID_CREATED_AT%22%3A%222024-07-29T14%3A39%3A09%22%7D',
         'pbjs-unifiedid_cst': 'zix7LPQsHA%3D%3D',
-        'sec_bs': '8541ef5391d62269c2509e19e33fc47c',
-        'sec_ts': '1725884550',
-        'sec_id': 'c301bfd82b35df12af98cf8d92e313f5',
-        '__cf_bm': 'Lb55_wtna0lIRNjtx0gt40mPUdUxCK.5BEUg.VL_OlA-1725884550-1.0.1.1-5cn0nqvUqdgc2c5bHIBmfnfFLYYZ969_BiADYNy_iLPftUZWDdjAQUoyORNdxyFS2IgHMmWRkKY7GLw7RSY7Tg',
         '_gid': 'GA1.2.1733143105.1725884551',
+        '__cf_bm': 'EEZ_3DPimV6z5mHTVklc_Q51PH3d946GqR8bOJNwDjU-1725976379-1.0.1.1-TV2EregiOz1HCJSnHyKFm9mktI3eX2xKZncVyj0ZC7cygi1YVsPEgGK5gYwl0iQYRtlMPMeDJl7YnDKno4K.LA',
+        'sec_bs': '0149f95ec9c40fe1453128a2f7d88b5e',
+        'sec_ts': '1725976385',
+        'sec_id': '4592ce26dbc180fbcb4e2592e73b2ada',
         '_lr_retry_request': 'true',
-        'cf_clearance': 'gzasu7QajlXJSDytWNd53V3ZRYJAkQU5arfYUpp2YUM-1725884552-1.2.1.1-.WkO4fmjWIBhpj_O2W9lut5TpHe.fJ_jbjbp8iV2gZmpn1oSEgtm0ccc7mzISYbyHgdCIezAhZ4ggf8vkqWbwI0DrSEmD48KGnQX7nbhe.0ZBuw0_2G9Fkb_erEtorLTGhh1_m7dXGcmR_vTPCGkElRYaBvx.2htkzoLgIxYcW5BUT_k2FFOYZMuNHTQ0loNv8.mfnb9RJttjBZWPMmJyGg4mSbQzuOdB69n_ThrZiezfHmyVpForX2h0aA8ZNZ.MRWwmDdKSXGWeY6GinjfILqnoMqFUfbWLYIllrXYg8Xwvbj3HYm8.OuGSdya4Ag.vqwursZD2CiGVpuKjJvC9ee6BkVfRiWlIpd5j4bG4IyMlF3A2wDH0mr9Val1C9_19954oIft2Sb4PUzTtub6cFCj9KQe1E1JyT_GIQAiKrqvekmNRjNYr15fowid1ZW9',
+        'cf_clearance': '2IgQEfS.W139rXyl0Ay5dlX7fdhx2nWcwvnR_Pe_UJw-1725976386-1.2.1.1-ElZ7AphHPs_fMtgVC3_9LvyHvwqwVxARMLHaq1iP52zk8s1FkTVu5OAi5NSsOm96gGsCq5EahZF8QNpcup3CjSit3thqHyYPNjjCoTUbQtrZJFDiHpDdXkCbZUC8odQEdp.tCfNwfMt4OUxp.emVrQIWF4KqQG.xyWiNuoB3qGEGbrfGA9aBA_wynxLt0.bWLXKdSeKZ_cJmpGmKieL4O9dmM.EMRfHEXnjBl8MKqJW2CS8Uw7ey7.BJ0NwlT1yZBHKFIS2WWFaKJDFH8aJkQ3rMDZgLNDh1g0q57EmA4LfOxFZHEzHJrdGD77XQk7jbebkXM3ntZuqnw839bmJ6AN9XqNOMmiakNI.adZpJxMVfHkUK_rR1wgzRPuh5fuSCoZoBJGf0Ua0QhIAnpmcH6uFv5EQi4ioS..drufIfSD8vzQ0DLUzfuDmLLSVhdS6_',
+        '_gat_gtag_UA_59057_1': '1',
         '_ga': 'GA1.1.301988536.1724942349',
-        '_ga_CPSL518SBG': 'GS1.1.1725884550.6.1.1725884583.27.0.0',
+        '_ga_CPSL518SBG': 'GS1.1.1725976385.9.1.1725977015.54.0.0',
     }
 
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'accept-language': 'en-US,en;q=0.9',
-        # 'cookie': '_pubcid=fe20b9ba-099c-4b83-9dbe-8c42a53e42fe; _pubcid_cst=zix7LPQsHA%3D%3D; _lr_env_src_ats=false; pbjs-unifiedid=%7B%22TDID%22%3A%221a731514-10e5-45b2-af74-04dc141c0f5e%22%2C%22TDID_LOOKUP%22%3A%22TRUE%22%2C%22TDID_CREATED_AT%22%3A%222024-07-29T14%3A39%3A09%22%7D; pbjs-unifiedid_cst=zix7LPQsHA%3D%3D; sec_bs=8541ef5391d62269c2509e19e33fc47c; sec_ts=1725884550; sec_id=c301bfd82b35df12af98cf8d92e313f5; __cf_bm=Lb55_wtna0lIRNjtx0gt40mPUdUxCK.5BEUg.VL_OlA-1725884550-1.0.1.1-5cn0nqvUqdgc2c5bHIBmfnfFLYYZ969_BiADYNy_iLPftUZWDdjAQUoyORNdxyFS2IgHMmWRkKY7GLw7RSY7Tg; _gid=GA1.2.1733143105.1725884551; _lr_retry_request=true; cf_clearance=gzasu7QajlXJSDytWNd53V3ZRYJAkQU5arfYUpp2YUM-1725884552-1.2.1.1-.WkO4fmjWIBhpj_O2W9lut5TpHe.fJ_jbjbp8iV2gZmpn1oSEgtm0ccc7mzISYbyHgdCIezAhZ4ggf8vkqWbwI0DrSEmD48KGnQX7nbhe.0ZBuw0_2G9Fkb_erEtorLTGhh1_m7dXGcmR_vTPCGkElRYaBvx.2htkzoLgIxYcW5BUT_k2FFOYZMuNHTQ0loNv8.mfnb9RJttjBZWPMmJyGg4mSbQzuOdB69n_ThrZiezfHmyVpForX2h0aA8ZNZ.MRWwmDdKSXGWeY6GinjfILqnoMqFUfbWLYIllrXYg8Xwvbj3HYm8.OuGSdya4Ag.vqwursZD2CiGVpuKjJvC9ee6BkVfRiWlIpd5j4bG4IyMlF3A2wDH0mr9Val1C9_19954oIft2Sb4PUzTtub6cFCj9KQe1E1JyT_GIQAiKrqvekmNRjNYr15fowid1ZW9; _ga=GA1.1.301988536.1724942349; _ga_CPSL518SBG=GS1.1.1725884550.6.1.1725884583.27.0.0',
+        'cache-control': 'max-age=0',
+        # 'cookie': '_pubcid=fe20b9ba-099c-4b83-9dbe-8c42a53e42fe; _pubcid_cst=zix7LPQsHA%3D%3D; _lr_env_src_ats=false; pbjs-unifiedid=%7B%22TDID%22%3A%221a731514-10e5-45b2-af74-04dc141c0f5e%22%2C%22TDID_LOOKUP%22%3A%22TRUE%22%2C%22TDID_CREATED_AT%22%3A%222024-07-29T14%3A39%3A09%22%7D; pbjs-unifiedid_cst=zix7LPQsHA%3D%3D; _gid=GA1.2.1733143105.1725884551; __cf_bm=EEZ_3DPimV6z5mHTVklc_Q51PH3d946GqR8bOJNwDjU-1725976379-1.0.1.1-TV2EregiOz1HCJSnHyKFm9mktI3eX2xKZncVyj0ZC7cygi1YVsPEgGK5gYwl0iQYRtlMPMeDJl7YnDKno4K.LA; sec_bs=0149f95ec9c40fe1453128a2f7d88b5e; sec_ts=1725976385; sec_id=4592ce26dbc180fbcb4e2592e73b2ada; _lr_retry_request=true; cf_clearance=2IgQEfS.W139rXyl0Ay5dlX7fdhx2nWcwvnR_Pe_UJw-1725976386-1.2.1.1-ElZ7AphHPs_fMtgVC3_9LvyHvwqwVxARMLHaq1iP52zk8s1FkTVu5OAi5NSsOm96gGsCq5EahZF8QNpcup3CjSit3thqHyYPNjjCoTUbQtrZJFDiHpDdXkCbZUC8odQEdp.tCfNwfMt4OUxp.emVrQIWF4KqQG.xyWiNuoB3qGEGbrfGA9aBA_wynxLt0.bWLXKdSeKZ_cJmpGmKieL4O9dmM.EMRfHEXnjBl8MKqJW2CS8Uw7ey7.BJ0NwlT1yZBHKFIS2WWFaKJDFH8aJkQ3rMDZgLNDh1g0q57EmA4LfOxFZHEzHJrdGD77XQk7jbebkXM3ntZuqnw839bmJ6AN9XqNOMmiakNI.adZpJxMVfHkUK_rR1wgzRPuh5fuSCoZoBJGf0Ua0QhIAnpmcH6uFv5EQi4ioS..drufIfSD8vzQ0DLUzfuDmLLSVhdS6_; username=jman777jman; _gat_gtag_UA_59057_1=1; _ga=GA1.1.301988536.1724942349; _ga_CPSL518SBG=GS1.1.1725976385.9.1.1725977015.54.0.0',
         'priority': 'u=0, i',
-        'referer': 'https://rateyourmusic.com/charts/top/song/all-time/a:red%2dhouse%2dpainters/',
+        'referer': 'https://rateyourmusic.com/artist/radiohead',
         'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
         'sec-ch-ua-arch': '"x86"',
         'sec-ch-ua-bitness': '"64"',
@@ -63,7 +65,7 @@ def scrape_rym_top_songs(year="all-time", genre=None, artist=None):
     response = requests.get(url, cookies=cookies, headers=headers)
 
     if response.status_code != 200:
-        return {"error": "Failed to retrieve data from RYM"}
+        return {"error": "Failed to fetch data", "status_code": response.status_code}
 
     soup = BeautifulSoup(response.content, "html.parser")
 
@@ -98,3 +100,7 @@ def scrape_rym_top_songs(year="all-time", genre=None, artist=None):
                 })
 
     return songs
+
+# Test the function
+songs = scrape_rym_top_songs(year="all-time", artist="red house painters")
+print(songs)
