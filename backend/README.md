@@ -1,0 +1,2 @@
+<h2>RYM Playlist Creator</h2>
+<p>This was going to allow users to create spotify playlists from rym's top songs charts. Had it working and just had to make it pretty but rym cracks down pretty heavily on web scraping and has banned ppl for it. Not gonna roll the dice so guess we have to wait for the api which they've been working on for a decade.</p>
